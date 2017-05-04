@@ -1,0 +1,97 @@
+<div class="main_login">
+    <div class="col-md-12">
+    	<h1 style="text-align: center;">Demo Login</h1>
+        <div class="col-md-6">
+            <form role="form" name="signinform" ng-submit="ConcatTwoArray(signinform,user)" class="form-horizontal form-groups-bordered login_form" novalidate>
+                <div>
+                    <h2 class="login_header">Signin</h2>
+                    <div class="form-group">
+                        <label for="field-1" class="col-sm-5 control-label">Username</label>
+                        <div class="col-sm-5">
+                            <input type="text" class="form-control" id="field-1" placeholder="Enter username" ng-model="user.username" name="username" required>
+                                <div data-ng-messages="signinform.$submitted && signinform.username.$error" role="alert" class="error_msg">
+                                    <div data-ng-message="required">Enter the username</div>
+                                </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="field-3" class="col-sm-5 control-label">Password</label>
+                        <div class="col-sm-5">
+                            <input type="password" class="form-control" id="field-3" placeholder=" Enter Password" ng-model="user.password" name="password" required>
+                                <div data-ng-messages="signinform.$submitted && signinform.password.$error" role="alert" class="error_msg">
+                                    <div data-ng-message="required">Enter the password</div>
+                                </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-offset-4 col-sm-7">
+                            <button type="submit" class="btn  btn-success_green loginbtn" >Signin</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="col-md-6">
+            <form role="form" name="signupfrm" ng-submit="signup(signupfrm)" class="form-horizontal form-groups-bordered login_form" id="signupfrmid" novalidate>
+                <div>
+                    <h2 class="login_header">Sign up</h2>
+                    <div class="form-group">
+                        <label for="field-1" class="col-sm-5 control-label">Full Name</label>
+                        <div class="col-sm-5">
+                            <input type="text" class="form-control" id="field-1" placeholder="Enter Business Name" ng-model="businessdata.business_name" name="businessname" required>
+                                <div data-ng-messages="signupfrm.$submitted && signupfrm.businessname.$error" role="alert" class="error_msg">
+                                    <div data-ng-message="required">Enter the full name</div>
+                                </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="field-3" class="col-sm-5 control-label">Address</label>
+                        <div class="col-sm-5">
+                            <input type="text" class="form-control" id="field-3" placeholder=" Enter Address" ng-model="businessdata.business_address" name="address" required>
+                                <div data-ng-messages="signupfrm.$submitted && signupfrm.address.$error" role="alert" class="error_msg">
+                                    <div data-ng-message="required">Enter the address</div>
+                                </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="field-1" class="col-sm-5 control-label">Email Id</label>
+                        <div class="col-sm-5">
+                            <input type="text" class="form-control" id="field-1" placeholder="Enter Email Id" ng-model="businessdata.email_id" name="emailid" required>
+                                <div data-ng-messages="signupfrm.$submitted && signupfrm.emailid.$error" role="alert" class="error_msg">
+                                    <div data-ng-message="required">Enter the email-id</div>
+                                </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="field-1" class="col-sm-5 control-label">Username</label>
+                        <div class="col-sm-5">
+                            <input type="text" class="form-control" id="field-1" placeholder="Enter username" ng-model="businessdata.business_username" name="username" required>
+                                <div data-ng-messages="signupfrm.$submitted && signupfrm.username.$error" role="alert" class="error_msg">
+                                    <div data-ng-message="required">Enter the username</div>
+                                </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="field-3" class="col-sm-5 control-label">Password</label>
+                        <div class="col-sm-5">
+                            <input type="password" class="form-control" id="field-3" placeholder="Enter Password" ng-model="businessdata.business_password" name="password" required>
+                                <div data-ng-messages="signupfrm.$submitted && signupfrm.password.$error" role="alert" class="error_msg">
+                                    <div data-ng-message="required">Enter Password</div>
+                                </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-offset-4 col-sm-7">
+                            <button type="submit" class="btn  btn-success_green loginbtn" >Sign up</button>
+                        </div>
+                        <div class="col-sm-offset-4 col-sm-7">
+                            <p ng-show="showsuccess" class="success_msg">{{signupmsg}}</p>
+                            <p ng-show="showalreadyregimsg" class="error_msg">{{alradyregistermsg}}</p>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,23 @@
+{
+  "name": "demowebsite",
+  "description": "sample web",
+  "main": "server.js",
+  "authors": [
+    "sameer vedpathak"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-ui-router": "0.3.1",
+    "bootstrap": "^3.3.7",
+    "a0-angular-storage": "^0.0.15",
+    "com.effectiveui.tableau": "angular-tableau#^0.1.1"
+  }
+}
